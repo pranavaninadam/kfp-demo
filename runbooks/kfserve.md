@@ -128,7 +128,7 @@ kubectl edit configmap inference-config -n kubeflow
 ```
  - After modifying the inference-config with your image, you can go ahead and create an inference for your custom model.
 
- - Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/end-to-end-pipeline.ipynb) link to create a custom model and serve it through kfserving.
+ - Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/notebooks/end-to-end-pipeline.ipynb) link to create a custom model and serve it through kfserving.
 
  <br /> <hr> <br />
 

@@ -132,7 +132,7 @@ kubectl edit configmap inference-config -n kubeflow
 
  <br /> <hr> <br />
 
-<a name="intro"></a>
+<a name="reference"></a>
 
 ## Reference Links
 

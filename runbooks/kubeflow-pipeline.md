@@ -102,7 +102,7 @@ In this section we will learn how to build a ML pipeline using prebuilt componen
 
 - In this example we will build a pipeline using pre-built components.
 
-- Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/ml-pipeline-with-prebuilt-components.ipynb) notebook for a step by step explaination.
+- Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/notebooks/ml-pipeline-with-prebuilt-components.ipynb) notebook for a step by step explaination.
 
 <br /> <hr> <br />
 
@@ -120,11 +120,11 @@ In this section we will learn how to build a ML pipeline using prebuilt componen
 
 In this section we will learn how to build a custom ML pipeline along with KFServe to serve the model.
 
-Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/end-to-end-pipeline.ipynb) notebook for a step by step explaination.
+Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/notebooks/end-to-end-pipeline.ipynb) notebook for a step by step explaination.
 
 <br /> <hr> <br />
 
-<a name="#troubleshoot"></a>
+<a name="troubleshoot"></a>
 
 ## Troubleshoot Guide
 

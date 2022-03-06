@@ -113,7 +113,7 @@ To Use KFServing to serve your custom model there are a few things to consider.
  - The versions you are using to develop your model should be supported by kfserve. 
  - This [link](https://github.com/kserve/kserve/tree/master/docs/samples#kserve-features-and-examples) contains the supported versions of various modules.
 
- - Since the KServe SKLearnServer image is built from a specific version of scikit-learn pip package, sometimes it might not be compatible with the pickled model you saved from your training environment, however you can build your own SKLearnServer image following [these instructions](https://github.com/kserve/kserve/tree/master/python/sklearnserver).
+ - Since the KServe SKLearnServer image is built from a specific version of scikit-learn pip package, sometimes it might not be compatible with the pickled model you saved from your training environment, however you can build your own SKLearnServer image following [these instructions](https://github.com/kserve/kserve/tree/master/python/sklearnserver#building-your-own-scikit-learn-server-docker-image).
 
  - To use your SKLearnServer image, we must add the image to the kserve configmap.
 
@@ -128,7 +128,7 @@ kubectl edit configmap inference-config -n kubeflow
 ```
  - After modifying the inference-config with your image, you can go ahead and create an inference for your custom model.
 
- - Follow [this]() link to create a custom model and serve it through kfserving.
+ - Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/end-to-end-pipeline.ipynb) link to create a custom model and serve it through kfserving.
 
  <br /> <hr> <br />
 

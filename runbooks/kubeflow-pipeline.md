@@ -76,9 +76,9 @@ Kubeflow Pipelines offer a few samples that you can use to try out Kubeflow Pipe
 
 In this section we will learn how to build a basic custom ML pipeline.
 
-To start building our pipeline we must configure the notebook, follow this [link]() to get started and create a notebook server.
+To start building our pipeline we must configure the notebook, follow this [link](https://github.com/pranavaninadam/kfp-demo/blob/main/runbooks/configure-notebook.md) to get started and create a notebook server.
 
-Follow [this]() notebook for a step by step explaination.
+Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/notebooks/hello-world-pipeline.ipynb) notebook for a step by step explaination.
 
 <br /> <hr> <br />
 
@@ -91,7 +91,7 @@ Follow [this]() notebook for a step by step explaination.
 **Prerequisites**
 <br />
 
-To start building our pipeline we must configure the notebook, follow this [link]() to get started and create a notebook server.
+To start building our pipeline we must configure the notebook, follow this [link](https://github.com/pranavaninadam/kfp-demo/blob/main/runbooks/configure-notebook.md) to get started and create a notebook server.
 <br />
 
 In this section we will learn how to build a ML pipeline using prebuilt components.
@@ -102,7 +102,7 @@ In this section we will learn how to build a ML pipeline using prebuilt componen
 
 - In this example we will build a pipeline using pre-built components.
 
-- Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/ml-pipeline-demo.ipynb) notebook for a step by step explaination.
+- Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/ml-pipeline-with-prebuilt-components.ipynb) notebook for a step by step explaination.
 
 <br /> <hr> <br />
 
@@ -114,17 +114,17 @@ In this section we will learn how to build a ML pipeline using prebuilt componen
 
 
 **Prerequisites**
-- Understand [KFServe]().
+- Understand [KFServe](https://github.com/pranavaninadam/kfp-demo/blob/main/runbooks/kfserve.md).
 
-- To start building our pipeline we must configure the notebook, follow this [link]() to get started and create a notebook server.
+- To start building our pipeline we must configure the notebook, follow this [link](https://github.com/pranavaninadam/kfp-demo/blob/main/runbooks/configure-notebook.md) to get started and create a notebook server.
 
 In this section we will learn how to build a custom ML pipeline along with KFServe to serve the model.
 
-Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/ml-pipeline-demo.ipynb) notebook for a step by step explaination.
+Follow [this](https://github.com/pranavaninadam/kfp-demo/blob/main/end-to-end-pipeline.ipynb) notebook for a step by step explaination.
 
 <br /> <hr> <br />
 
-<a name="pipelineSDK1"></a>
+<a name="#troubleshoot"></a>
 
 ## Troubleshoot Guide
 

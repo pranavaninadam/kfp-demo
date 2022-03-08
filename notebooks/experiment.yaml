@@ -1,0 +1,90 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Experiment
+metadata:
+  name: '<experiment-name>' # replace with your experiment name
+  namespace: '<your-namespace>' # replace with your namesapce
+spec:
+  algorithm:
+    algorithmName: random
+    algorithmSettings: null
+  earlyStopping: null
+  maxFailedTrialCount: 3
+  maxTrialCount: 5
+  metricsCollectorSpec: null
+  nasConfig: null
+  objective:
+    additionalMetricNames: null
+    goal: 0.001
+    metricStrategies: null
+    objectiveMetricName: loss
+    type: minimize
+  parallelTrialCount: 2
+  parameters:
+    - feasibleSpace:
+        list: null
+        max: '0.05'
+        min: '0.01'
+        step: null
+      name: learning_rate
+      parameterType: double
+    - feasibleSpace:
+        list: null
+        max: '100'
+        min: '80'
+        step: null
+      name: batch_size
+      parameterType: int
+  resumePolicy: null
+  trialTemplate:
+    configMap: null
+    failureCondition: null
+    primaryContainerName: tensorflow
+    primaryPodLabels: null
+    retain: null
+    successCondition: null
+    trialParameters:
+    - description: Learning rate for the training model
+      name: learningRate
+      reference: learning_rate
+    - description: Batch size for the model
+      name: batchSize
+      reference: batch_size
+    trialSpec:
+      apiVersion: kubeflow.org/v1
+      kind: TFJob
+      spec:
+        tfReplicaSpecs:
+          Chief:
+            replicas: 1
+            restartPolicy: OnFailure
+            template:
+              metadata:
+                annotations:
+                  sidecar.istio.io/inject: 'false'
+              spec:
+                containers:
+                - command:
+                  - python
+                  - /opt/model.py
+                  - --tf-train-steps=200
+                  - --tf-learning-rate=${trialParameters.learningRate}
+                  - --tf-batch-size=${trialParameters.batchSize}
+                  image: docker.io/liuhougangxa/tf-estimator-mnist
+                  name: tensorflow
+          Worker:
+            replicas: 1
+            restartPolicy: OnFailure
+            template:
+              metadata:
+                annotations:
+                  sidecar.istio.io/inject: 'false'
+              spec:
+                containers:
+                - command:
+                  - python
+                  - /opt/model.py
+                  - --tf-train-steps=200
+                  - --tf-learning-rate=${trialParameters.learningRate}
+                  - --tf-batch-size=${trialParameters.batchSize}
+                  image: docker.io/liuhougangxa/tf-estimator-mnist
+                  name: tensorflow

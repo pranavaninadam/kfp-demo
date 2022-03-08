@@ -43,7 +43,7 @@ You can improve your hyperparameter tunning experiments by using early stopping 
 
 ![problem in loading image](./images/katib-3.jpg)
 
-- Delete already existing yaml and copy the contents from [experiment.yaml]() file and click on create to submit the experiment.
+- Delete already existing yaml and copy the contents from [experiment.yaml](https://github.com/pranavaninadam/kfp-demo/blob/main/notebooks/experiment.yaml) file and click on create to submit the experiment.
 
 - Once the experiment is submitted, you can view the running experiment by clicking on the experiment.
 
